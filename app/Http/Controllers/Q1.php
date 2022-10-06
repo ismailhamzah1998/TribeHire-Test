@@ -19,10 +19,15 @@ class Q1 extends Controller
         $comments = json_decode($rawComments);
         $listCommentPostId = [];
 
+        
         // Put all id in array.
         foreach ($comments as $key => $val) {
+            dd($val);
             array_push($listCommentPostId, $val->postId);
         }
+
+
+        dd(array_count_values($listCommentPostId));
 
         // Get all posts endpoint
         $rawPosts = Http::get('https://jsonplaceholder.typicode.com/posts');

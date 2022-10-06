@@ -23,6 +23,6 @@ Route::get('/greeting', function () {
     return 'Hello World';
 });
 
-Route::get('/q1', [Q1::class, 'q1']);
+Route::get('/topposts', [Q1::class, 'q1']);
 
-Route::get('/q2', [Q2::class, 'q2']);
+Route::get('/search', [Q2::class, 'q2']);
